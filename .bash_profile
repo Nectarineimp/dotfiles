@@ -10,7 +10,7 @@ export LSCOLORS=exFxCxDxBxegedabagacad
 
 export CVSROOT=:ext:cphillip@susedev:/cvsroot/portal
 
-export SVN_EDITOR=vi
+export EDITOR=vi
 
 # This resolves issues install the mysql, postgres, and other gems with native non universal binary extensions
 export ARCHFLAGS='-arch x86_64'
@@ -20,10 +20,10 @@ export ARCHFLAGS='-arch x86_64'
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# My scripts
 export PATH=$PATH:~/bin
 
 alias cu='cucumber'
-alias today='mvim ~/task-lists/Today'
 alias ss='svn status'
 alias wr='rvm list'
 
@@ -45,3 +45,4 @@ export PS1="\w> "
 
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
