@@ -41,7 +41,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
       . /opt/local/etc/bash_completion
 fi
 
-export PS1="\w> "
+export PS1='\e[0;34m\u\e[m@\h:\e[0;31m\w\e[m> '
 
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
