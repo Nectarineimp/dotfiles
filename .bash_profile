@@ -23,6 +23,11 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # My scripts
 export PATH=$PATH:~/bin
 
+# Enable autotest to run cucumber and rspec
+AUTOFEATURE=true
+RSPEC=true
+export AUTOFEATURE RSPEC
+
 alias cu='cucumber'
 alias ss='svn status'
 alias wr='rvm list'
