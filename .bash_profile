@@ -48,6 +48,11 @@ fi
 
 export PS1='\e[0;34m\u\e[m@\h:\e[0;31m\w\e[m> '
 
+if [ -f ~/.local_bash_profile ]; then
+      . ~/.local_bash_profile
+fi
+
+
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
