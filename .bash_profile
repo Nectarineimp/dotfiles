@@ -21,6 +21,15 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 export PATH=/opt/local/lib/postgresql84/bin:$PATH
 
+
+export EC2_HOME=~/ec2-api-tools
+export PATH=$PATH:$EC2_HOME/bin
+export EC2_PRIVATE_KEY=~/.ec2/pk-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
+export EC2_CERT=~/.ec2/cert-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+
+export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+
 # My scripts
 export PATH=$PATH:~/bin
 
