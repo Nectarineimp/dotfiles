@@ -1,0 +1,6 @@
+
+" I really just want to disable the bell that yells at me when I use the
+" OSX tab switching short cuts, but I couldn't find anything that fine-
+" grained, so I just ditching the bell.
+set visualbell
+hi Bell display :none;
