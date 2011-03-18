@@ -64,7 +64,7 @@ fi
 
 # Thanks to http://www.ibm.com/developerworks/linux/library/l-tip-prompt/
 # for helping me fix my wrapping
-export PS1='\[\e[0;34m\]\u\[\e[m@\]\h:\[\e[0;31m\]\w\[\e[m\]> '
+export PS1='\[\e[0;31m\]\w\[\e[m\]> '
 
 if [ -f ~/.local_bash_profile ]; then
       . ~/.local_bash_profile
