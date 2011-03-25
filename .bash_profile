@@ -19,9 +19,16 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 export PATH=/opt/local/lib/postgresql84/bin:$PATH
 
+export EC2_HOME=~/ec2-api-tools
+export EC2_PRIVATE_KEY=~/.ec2/pk-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
+export EC2_CERT=~/.ec2/cert-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+
+
 export GROOVY_HOME=~/groovy
 export GRADLE_HOME=~/gradle
-export PATH=$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin
+export PATH=$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin
 
 
 # Enable autotest to run cucumber and rspec
