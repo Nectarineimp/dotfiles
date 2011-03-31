@@ -25,10 +25,11 @@ export EC2_CERT=~/.ec2/cert-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 
-
+export M2_HOME=~/maven/current
+export M2=$M2_HOME/bin
 export GROOVY_HOME=~/groovy
 export GRADLE_HOME=~/gradle
-export PATH=$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin
+export PATH=$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin:$M2
 
 
 # Enable autotest to run cucumber and rspec
