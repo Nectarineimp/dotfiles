@@ -13,12 +13,6 @@ export EDITOR=vi
 # This resolves issues install the mysql, postgres, and other gems with native non universal binary extensions
 export ARCHFLAGS='-arch x86_64'
 
-
-# MacPorts Installer addition on 2010-06-28_at_12:54:31: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-export PATH=/opt/local/lib/postgresql84/bin:$PATH
-
 export EC2_HOME=~/ec2-api-tools
 export EC2_PRIVATE_KEY=~/.ec2/pk-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
 export EC2_CERT=~/.ec2/cert-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
@@ -65,8 +59,8 @@ alias ber='bundle exec rake'
 # make and change to a directory
 md () { mkdir -p "$1" && cd "$1"; }
 
-if [ -f /opt/local/etc/bash_completion ]; then
-      . /opt/local/etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
 fi
 
 # Thanks to http://www.ibm.com/developerworks/linux/library/l-tip-prompt/
