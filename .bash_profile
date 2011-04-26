@@ -9,6 +9,7 @@ export CLICOLOR=1
 export LSCOLORS=exFxCxDxBxegedabagacad
 
 export EDITOR=vi
+export EDITOR='mvim -f -c "au VimLeave * opendiff -a Terminal"'
 
 # This resolves issues install the mysql, postgres, and other gems with native non universal binary extensions
 export ARCHFLAGS='-arch x86_64'
@@ -31,6 +32,7 @@ AUTOFEATURE=true
 RSPEC=true
 export AUTOFEATURE RSPEC
 
+alias emacs='open -a Emacs.app'
 alias cu='cucumber'
 alias ss='svn status'
 alias gs='git status '
