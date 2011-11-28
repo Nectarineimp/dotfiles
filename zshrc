@@ -16,12 +16,12 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode svn ruby osx bundler brew)
+plugins=(git vi-mode svn ruby osx bundler brew rails lein)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-set -o vi
+set -o emacs
 
 export EDITOR='mvim -f -c "au VimLeave * opendiff -a Terminal"'
 
@@ -45,12 +45,14 @@ export SQLPATH="/usr/local/oracle/instantclient_10_2"
 export TNS_ADMIN="/usr/local/oracle/network/admin"
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
+export CLOJURESCRIPT_HOME=/Users/calebphillips/Code/cljs/clojurescript
 
-export PATH=$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin:$M2:$DYLD_LIBRARY_PATH
 
+export PATH=$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin:$M2:$DYLD_LIBRARY_PATH:$CLOJURESCRIPT_HOME/bin
 
+alias svnst="svn st|grep -v 'X'|grep -v 'Performing'|grep -v '^$'"
+alias ss="svnst | grep -v yml"
 alias emacs='open -a Emacs.app'
-alias ss='svn status'
 alias gs='git status '
 alias ga='git add '
 alias gb='git branch '
@@ -63,11 +65,19 @@ alias gx='gitx --all'
 alias got='git '
 alias get='git '
 
+alias hs='hg stat'
+alias hd='hg diff'
+alias hod='hg opendiff'
+alias hc='hg commit'
+alias hb='hg branch'
+
 alias ..="cd .."        #go to parent dir
 alias ...="cd ../.."    #go to grandparent dir
 alias l.='ls -d .*'     #list hidden files
 alias ll='ls -lhrt'     #extra info compared to "l"
 alias lld='ls -lUd */'  #list directories
+
+alias cuc='cucumber --format pretty'
 
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
