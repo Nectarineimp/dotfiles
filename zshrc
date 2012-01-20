@@ -1,3 +1,4 @@
+. ~/.profile
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -46,7 +47,6 @@ export TNS_ADMIN="/usr/local/oracle/network/admin"
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
 export CLOJURESCRIPT_HOME=/Users/calebphillips/Code/cljs/clojurescript
-
 
 export PATH=$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin:$M2:$DYLD_LIBRARY_PATH:$CLOJURESCRIPT_HOME/bin
 
