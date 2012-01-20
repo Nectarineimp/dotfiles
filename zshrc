@@ -79,5 +79,6 @@ alias lld='ls -lUd */'  #list directories
 
 alias cuc='cucumber --format pretty'
 
+export JRUBY_OPTS="--1.9"
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
