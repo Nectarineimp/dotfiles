@@ -1,4 +1,5 @@
 . ~/.profile
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -29,10 +30,6 @@ export EDITOR='mvim -f -c "au VimLeave * opendiff -a Terminal"'
 # This resolves issues install the mysql, postgres, and other gems with native non universal binary extensions
 export ARCHFLAGS='-arch x86_64'
 
-export EC2_HOME=~/ec2-api-tools
-export EC2_PRIVATE_KEY=~/.ec2/pk-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
-export EC2_CERT=~/.ec2/cert-ZWGNESIRMFRDKVNJU2MWOF7TMTZLQ356.pem
-
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 
@@ -48,7 +45,7 @@ export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
 export CLOJURESCRIPT_HOME=/Users/calebphillips/Code/cljs/clojurescript
 
-export PATH=$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin:$M2:$DYLD_LIBRARY_PATH:$CLOJURESCRIPT_HOME/bin
+export PATH=$M2:$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin:$DYLD_LIBRARY_PATH:$CLOJURESCRIPT_HOME/bin
 
 alias svnst="svn st|grep -v 'X'|grep -v 'Performing'|grep -v '^$'"
 alias ss="svnst | grep -v yml"
@@ -80,5 +77,3 @@ alias lld='ls -lUd */'  #list directories
 alias cuc='cucumber --format pretty'
 
 export JRUBY_OPTS="--1.9"
-
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
