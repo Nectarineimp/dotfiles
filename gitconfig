@@ -9,7 +9,6 @@
   co = checkout
   ci = commit
   st = status
-  br = branch
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
@@ -27,9 +26,6 @@
   noff = merge --no-ff
   l = log --graph --abbrev-commit --date=relative 
   la = !git l --all
-  div = divergence
-  gn = goodness
-  gnc = goodness --cached
   fa = fetch --all
   pom = push origin master
   b = branch
@@ -38,3 +34,6 @@
 
 [format]
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"

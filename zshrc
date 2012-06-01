@@ -18,7 +18,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode svn ruby osx bundler brew rails lein)
+plugins=(git vi-mode svn ruby osx brew rails lein)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,25 +48,7 @@ export CLOJURESCRIPT_HOME=/Users/calebphillips/Code/cljs/clojurescript
 export PATH=$M2:$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin:$DYLD_LIBRARY_PATH:$CLOJURESCRIPT_HOME/bin
 
 alias svnst="svn st|grep -v 'X'|grep -v 'Performing'|grep -v '^$'"
-alias ss="svnst | grep -v yml"
 alias emacs='open -a Emacs.app'
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
-
-alias got='git '
-alias get='git '
-
-alias hs='hg stat'
-alias hd='hg diff'
-alias hod='hg opendiff'
-alias hc='hg commit'
-alias hb='hg branch'
 
 alias ..="cd .."        #go to parent dir
 alias ...="cd ../.."    #go to grandparent dir
@@ -77,3 +59,5 @@ alias lld='ls -lUd */'  #list directories
 alias cuc='cucumber --format pretty'
 
 export JRUBY_OPTS="--1.9"
+
+unsetopt correct_all
