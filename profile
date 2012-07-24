@@ -13,11 +13,14 @@ alias bu="bundle update"
 alias ..="cd .."        #go to parent dir
 alias ...="cd ../.."    #go to grandparent dir
 alias l.='ls -d .*'     #list hidden files
-alias ll='ls -lhrt'     #extra info compared to "l"
+alias ltr='ls -lhrt'     #extra info compared to "l"
 alias lld='ls -lUd */'  #list directories
 
 alias son="cd ~/Code/sonian"
 alias ws="cd ~/Code/sonian/sa-website"
+
+# Tried to get away from this, but it's too fast
+alias gs="git status"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
