@@ -1,3 +1,5 @@
+echo "Loading bash_profile"
+
 . ~/.profile
 
 set -o emacs

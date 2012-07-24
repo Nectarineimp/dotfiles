@@ -1,3 +1,5 @@
+echo "Loading zshrc"
+
 . ~/.profile
 
 # Path to your oh-my-zsh configuration.
