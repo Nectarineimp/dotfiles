@@ -12,7 +12,7 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
-  
+
   di = diff
   dc = diff --cached
   amend = commit --amend
@@ -24,7 +24,7 @@
   ff = merge --ff-only
   pullff = pull --ff-only
   noff = merge --no-ff
-  l = log --graph --abbrev-commit --date=relative 
+  l = log --graph --abbrev-commit --date=relative
   la = !git l --all
   fa = fetch --all
   pom = push origin master
@@ -34,6 +34,3 @@
 
 [format]
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
