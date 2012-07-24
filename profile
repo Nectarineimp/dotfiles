@@ -23,9 +23,16 @@ alias gs="git status"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
-alias emacst='emacsclient -t'
-alias emacs='open -a Emacs.app'
+# Toggle between using the emacs .app and attaching to an existing
+# server with emacsclient based on what type of terminal we are using.
+# The assumption I am using here is that xterm* is using local
+# Terminal.app and wants the .app and everything else wants to use
+# emacs in the terminal (in tmux for example).
+if [[ $TERM =~ "^xterm" ]]; then
+    alias emacs='open -a Emacs.app'
+else
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t'
+fi
 
 export OPSCODE_USER=sonian_devs
 export PATH=~/Code/sonian/sa-chef-repo/bin:$PATH
