@@ -1,11 +1,13 @@
 . ~/.profile
+. ~/.privates
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="robbyrussell"
+#export ZSH_THEME="robbyrussell"
+export ZSH_THEME=sporty_256
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -47,6 +49,7 @@ export CLOJURESCRIPT_HOME=/Users/calebphillips/Code/cljs/clojurescript
 
 export PATH=$M2:$PATH:~/bin:$GROOVY_HOME/bin:$GRADLE_HOME/bin:$EC2_HOME/bin:$DYLD_LIBRARY_PATH:$CLOJURESCRIPT_HOME/bin
 
+alias gs="git status"
 alias svnst="svn st|grep -v 'X'|grep -v 'Performing'|grep -v '^$'"
 alias emacs='open -a Emacs.app'
 
