@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+files   = %w[bash_profile bashrc gitconfig gitignore profile zshrc]
+this_dir = File.this_dir(File.expand_path(__FILE__))
+
+files.each do |f|
+  target = "#{ENV['HOME']}/.#{f}"
+  if File.exists? target
+    puts "#{target} already exists"
+  else
+    puts "Creating #{target}"
+    File.symlink("#{this_dir}/#{f}", target)
+  end
+end
