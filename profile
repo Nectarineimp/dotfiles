@@ -5,10 +5,6 @@
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-export OPSCODE_USER=sonian_devs
-export PATH=~/Code/sonian/sa-chef-repo/bin:$PATH
-export PATH=$PATH:/Applications/wkhtmltopdf.app/Contents/MacOS
-
 # This resolves issues install the mysql, postgres, and other gems
 # with native non universal binary extensions
 export ARCHFLAGS='-arch x86_64'
@@ -18,4 +14,15 @@ export M2=$M2_HOME/bin
 export CLOJURESCRIPT_HOME=/Users/calebphillips/Code/cljs/clojurescript
 export JRUBY_OPTS="--1.9"
 
-export PATH=$M2:$PATH:~/bin:$CLOJURESCRIPT_HOME/bin
+# Sonian schtuff
+export OPSCODE_USER=sonian_devs
+CHEF_REPO=~/Code/sonian/sa-chef-repo
+WKHTMLTOPDF_BIN=/Applications/wkhtmltopdf.app/Contents/MacOS
+
+
+PATH=$CHEF_REPO/bin:$PATH
+PATH=$PATH:$WKHTMLTOPDF_BIN
+PATH=$M2:$PATH
+PATH=$PATH:~/bin
+PATH=$PATH:$CLOJURESCRIPT_HOME/bin
+export PATH
