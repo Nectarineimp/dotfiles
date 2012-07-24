@@ -1,4 +1,3 @@
-echo "Loading bash_profile"
 
 . ~/.profile
 

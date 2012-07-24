@@ -1,4 +1,3 @@
-echo "Loading zshrc"
 
 . ~/.profile
 

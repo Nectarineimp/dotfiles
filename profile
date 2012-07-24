@@ -1,4 +1,3 @@
-echo "Loading profile"
 
 # Load private variables (things that shouldn't be checked into source control)
 . ~/.privates
