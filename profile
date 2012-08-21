@@ -26,3 +26,7 @@ PATH=$M2:$PATH
 PATH=$PATH:~/bin
 PATH=$PATH:$CLOJURESCRIPT_HOME/bin
 export PATH
+
+# For building older rubies on Mountain Lion
+# http://coderwall.com/p/dtbuqg
+export CC=/usr/local/bin/gcc-4.2
