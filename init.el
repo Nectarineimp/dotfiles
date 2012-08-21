@@ -35,8 +35,8 @@
 (set-frame-font "Menlo-14")
 
 ;; I like monokai but it was wonky on tmux
-;;(color-theme-monokai)
-(load-theme 'wombat)
+(color-theme-monokai)
+;;(load-theme 'wombat)
 
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
@@ -104,3 +104,7 @@
   (server-start))
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
+
+;; Don't ping Indonesia when working on Rails
+;; https://github.com/technomancy/emacs-starter-kit/issues/39
+(setq ffap-machine-p-known 'reject)
