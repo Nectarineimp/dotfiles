@@ -13,18 +13,13 @@ export M2_HOME=~/maven/current
 export M2=$M2_HOME/bin
 export CLOJURESCRIPT_HOME=/Users/calebphillips/Code/cljs/clojurescript
 export JRUBY_OPTS="--1.9"
+export STORM_HOME=~/storm/current
 
-# Sonian schtuff
-export OPSCODE_USER=sonian_devs
-CHEF_REPO=~/Code/sonian/sa-chef-repo
-WKHTMLTOPDF_BIN=/Applications/wkhtmltopdf.app/Contents/MacOS
-
-
-PATH=$CHEF_REPO/bin:$PATH
-PATH=$PATH:$WKHTMLTOPDF_BIN
+PATH=/usr/local/bin:$PATH
 PATH=$M2:$PATH
 PATH=$PATH:~/bin
 PATH=$PATH:$CLOJURESCRIPT_HOME/bin
+PATH=$PATH:$STORM_HOME/bin
 export PATH
 
 # For building older rubies on Mountain Lion
