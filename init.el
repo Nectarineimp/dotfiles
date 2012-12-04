@@ -14,14 +14,11 @@
                       starter-kit-eshell
                       starter-kit-ruby
                       starter-kit-bindings
-                      scpaste
                       clojure-mode
                       clojure-test-mode
                       markdown-mode
                       yaml-mode
-                      tuareg
                       marmalade
-                      oddmuse
                       paredit
                       molokai-theme
                       nrepl)
